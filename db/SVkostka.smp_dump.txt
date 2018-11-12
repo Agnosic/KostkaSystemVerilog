@@ -1,0 +1,10 @@
+
+State Machine - |SVkostka|st_now
+Name st_now.k6 st_now.k5 st_now.k4 st_now.k3 st_now.k2 st_now.k1 st_now.k0 
+st_now.k0 0 0 0 0 0 0 0 
+st_now.k1 0 0 0 0 0 1 1 
+st_now.k2 0 0 0 0 1 0 1 
+st_now.k3 0 0 0 1 0 0 1 
+st_now.k4 0 0 1 0 0 0 1 
+st_now.k5 0 1 0 0 0 0 1 
+st_now.k6 1 0 0 0 0 0 1 
