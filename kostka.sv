@@ -15,16 +15,16 @@ st_typ st_now, st_next;
 	end
     always @ (  posedge clk )
 	begin
-        if ( reset ) st_now = k0;
+        if ( reset == 1'b0 ) st_now = k0;
         else st_now = st_next;
     end
 
-   always @ ( st_now )
+   always @ ( posedge clk )
 	begin
         case ( st_now ) 
         k1:
         begin
-            if ( button == 1'b1 ) 
+            if ( button == 1'b0 ) 
             begin
                 seg <= 7'b1111001;
             end
@@ -35,7 +35,7 @@ st_typ st_now, st_next;
         end
         k2:
         begin
-            if ( button == 1'b1 ) 
+            if ( button == 1'b0 ) 
             begin
                 seg <= 7'b0100100;
             end
@@ -46,7 +46,7 @@ st_typ st_now, st_next;
         end
         k3:
         begin
-            if ( button == 1'b1 ) 
+            if ( button == 1'b0 ) 
             begin
                 seg <= 7'b0110000;
             end
@@ -57,7 +57,7 @@ st_typ st_now, st_next;
         end
         k4:
         begin
-            if ( button == 1'b1 ) 
+            if ( button == 1'b0 ) 
             begin
                 seg <= 7'b0011001;
             end
@@ -68,7 +68,7 @@ st_typ st_now, st_next;
         end
         k5:
         begin
-            if ( button == 1'b1 ) 
+            if ( button == 1'b0 ) 
             begin
                 seg <= 7'b0010010;
             end
@@ -79,7 +79,7 @@ st_typ st_now, st_next;
         end
         k6:
         begin
-            if ( button == 1'b1 ) 
+            if ( button == 1'b0 ) 
             begin
                  seg <= 7'b0000010;
             end
